@@ -6,6 +6,12 @@
         verbose="false"
         bootstrap="src/tests/config/bootstrap.php"
 >
+    <testsuites>
+        <testsuite name="units">
+            <directory>src/tests</directory>
+        </testsuite>
+    </testsuites>
+
     <php>
         <var name="DB_DNS" value="mysql:dbname=myguestbook;host=172.17.0.1" />
         <var name="DB_HOST" value="172.17.0.1" />
