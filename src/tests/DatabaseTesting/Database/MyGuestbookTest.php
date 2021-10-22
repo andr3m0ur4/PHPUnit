@@ -24,7 +24,7 @@ abstract class MyGuestbookTest extends PHPUnit_Extensions_Database_TestCase
                 self::$pdo = new \PDO($GLOBALS['DB_DNS'], $GLOBALS['DB_USER'], $GLOBALS['DB_PASSWD']);
             }
 
-            $this->conn = $this->createDefaultDBConnection(self::$pdo, $GLOBALS['DB_DBNAME']);
+            $this->conn = $this->createDefaultDBConnection(self::$pdo, $GLOBALS['DB_DBNAME_TEST']);
         }
 
         return $this->conn;
@@ -35,8 +35,8 @@ abstract class MyGuestbookTest extends PHPUnit_Extensions_Database_TestCase
      */
     public function getDataSet()
     {
-        // return $this->createFlatXMLDataSet(dirname(__FILE__).'/../files/myFlatXmlFixture.xml');
-        return $this->createXMLDataSet(dirname(__FILE__).'/../files/myXmlFixture.xml');
+        return $this->createFlatXMLDataSet(dirname(__FILE__).'/../files/myFlatXmlFixture.xml');
+        // return $this->createXMLDataSet(dirname(__FILE__).'/../files/myXmlFixture.xml');
         // return new PHPUnit_Extensions_Database_DataSet_YamlDataSet(
         //     dirname(__FILE__) . '/../files/guestbook.yml'
         // );
