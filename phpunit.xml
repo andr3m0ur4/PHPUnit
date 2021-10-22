@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<phpunit
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/5.7/phpunit.xsd"
+         colors="true"
+         verbose="false"
+>
+    <php>
+        <var name="DB_DNS" value="mysql:dbname=myguestbook;host=localhost" />
+        <var name="DB_USER" value="andre-moura" />
+        <var name="DB_PASSWD" value="andre-moura" />
+        <var name="DB_DBNAME" value="myguestbook" />
+    </php>
+</phpunit>
