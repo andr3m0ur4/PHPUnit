@@ -35,7 +35,7 @@ abstract class MyGuestbookTest extends PHPUnit_Extensions_Database_TestCase
      */
     public function getDataSet()
     {
-        return $this->createFlatXMLDataSet(dirname(__FILE__).'/../files/myFlatXmlFixture.xml');
+        // return $this->createFlatXMLDataSet(dirname(__FILE__).'/../files/myFlatXmlFixture.xml');
         // return $this->createXMLDataSet(dirname(__FILE__).'/../files/myXmlFixture.xml');
         // return new PHPUnit_Extensions_Database_DataSet_YamlDataSet(
         //     dirname(__FILE__) . '/../files/guestbook.yml'
@@ -43,5 +43,13 @@ abstract class MyGuestbookTest extends PHPUnit_Extensions_Database_TestCase
         // $dataSet = new PHPUnit_Extensions_Database_DataSet_CsvDataSet();
         // $dataSet->addTable('guestbook', dirname(__FILE__) . '/../files/guestbook.csv');
         // return $dataSet;
+    }
+
+    /**
+     * @return PDO
+     */
+    public static function getPDO()
+    {
+        return self::$pdo;
     }
 }

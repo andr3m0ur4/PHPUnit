@@ -13,11 +13,16 @@
     </testsuites>
 
     <php>
-        <var name="DB_DNS" value="mysql:dbname=myguestbook;host=172.17.0.1" />
+        <var name="DB_DNS" value="mysql:dbname=myguestbook;host=localhost" />
+        <var name="DB_HOST" value="localhost" />
+        <var name="DB_USER" value="andre-moura" />
+        <var name="DB_PASSWD" value="andre-moura" />
+        <var name="DB_DBNAME" value="myguestbook" />
+        <!-- <var name="DB_DNS" value="mysql:dbname=myguestbook;host=172.17.0.1" />
         <var name="DB_HOST" value="172.17.0.1" />
         <var name="DB_USER" value="root" />
         <var name="DB_PASSWD" value="teste10" />
-        <var name="DB_DBNAME" value="ligamagic_principal" />
+        <var name="DB_DBNAME" value="ligamagic_principal" /> -->
         <var name="DB_DBNAME_TEST" value="myguestbook" />
         <var name="DB_PATH" value="src/tests/config/scheme.sql" />
         <var name="EXEC_BOOTSTRAP" value="false" />

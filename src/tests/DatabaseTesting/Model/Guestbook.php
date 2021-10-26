@@ -35,4 +35,23 @@ class Guestbook
         $stmt->bindValue(':content', $this->content);
         $stmt->execute();
     }
+
+    public function updateEntry($id, $user, $content)
+    {
+        $this->id = $id;
+        $this->user = $user;
+        $this->content = $content;
+
+        $this->update();
+    }
+
+    private function update()
+    {
+        $sql = "UPDATE guestbook SET user = :user, content = :content WHERE id = :id";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindValue(':id', $this->id);
+        $stmt->bindValue(':user', $this->user);
+        $stmt->bindValue(':content', $this->content);
+        $stmt->execute();
+    }
 }
